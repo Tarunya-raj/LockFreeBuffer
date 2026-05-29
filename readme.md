@@ -112,3 +112,6 @@ Core Features
 	Benchmarking
 	Clean API
 	Linux support
+
+
+[templated Single-threaded ring buffer->Thread safe mutex version, Lock free SPSC queue- . shared-memory IPC ring buffer-> ]

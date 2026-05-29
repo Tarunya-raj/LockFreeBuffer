@@ -1,0 +1,6 @@
+# Ignore the x64 build directory
+x64/
+
+# Optional but highly recommended for Visual Studio files:
+*.vcxproj.user
+*.aps
