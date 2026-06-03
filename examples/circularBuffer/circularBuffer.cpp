@@ -46,7 +46,7 @@ public:
 		if (this != &rhs)
 		{
 			auto temp = std::make_unique<T[]>(rhs.m_capacity);
-			for (size_t i = 0; i < rhs.m_size; ++i)
+			for (size_t i = 0; i < rhs.m_capacity; ++i)
 			{
 				temp[i] = rhs.m_buffer[i];
 			}
@@ -74,7 +74,7 @@ public:
 	{
 		return m_size == 0;
 	}
-	bool isfull() const noexcept
+	bool isFull() const noexcept
 	{
 		return m_size == m_capacity;
 	}
@@ -82,12 +82,20 @@ public:
 	{
 		if (isFull())
 		{
-			std::cerr << "Buffer Overflow\n";
+			throw std::overflow_error("Buffer Overflow\n");
 			return;
 		}
 		m_buffer[m_write_index] = value;
 		m_write_index = (m_write_index + 1) % m_capacity;
 		m_size++;
+	}
+	size_t getCapacity() const
+	{
+		return m_capacity;
+	}
+	size_t getSize() const
+	{
+		return m_size;
 	}
 	T pop()
 	{
@@ -99,7 +107,7 @@ public:
 		return value;
 	}
 
-	const T& readEnd() const
+	const T& front() const
 	{
 		if (isEmpty())
 			throw std::underflow_error("Queue empty");

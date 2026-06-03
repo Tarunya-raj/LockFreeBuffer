@@ -4,7 +4,9 @@ ZERO COPY LOCK FREE RING BUFFER IPC FRAMEWORK
 then Kernel's buffer, to reduce the overhead during context switching)
 
 LockFreeIPC/
-├── 3rdParty/          # External dependencies (e.g., Google Test, Benchmark)
+├── 3rdParty/          # External dependencies (e.g., Google Test, Benchmark) 
+|					   # git clone --recurse-submodules https://github.com/Tarunya-raj/LockFreeBuffer
+|					   # git submodule update --init --recursive
 ├── common/            # Shared utilities, helper classes, macros
 ├── examples/          # POCs, standalone projects (e.g. cicular/ring buffer,multi-threaded queue using mutex,  shm_client, shm_server)
 ├── include/           # Public/API header files
