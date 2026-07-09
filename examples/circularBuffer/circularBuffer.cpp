@@ -83,20 +83,12 @@ public:
 		if (isFull())
 		{
 			throw std::overflow_error("Buffer Overflow\n");
-			return;
 		}
 		m_buffer[m_write_index] = value;
 		m_write_index = (m_write_index + 1) % m_capacity;
 		m_size++;
 	}
-	size_t getCapacity() const
-	{
-		return m_capacity;
-	}
-	size_t getSize() const
-	{
-		return m_size;
-	}
+		
 	T pop()
 	{
 		if (isEmpty())

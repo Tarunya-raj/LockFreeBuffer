@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 4.3.3)
+cmake_minimum_required(VERSION 4.2.3)
 project(LockFreeIPC)
 add_executable(${PROJECT_NAME} src/main.cpp)
 #add_library(circular_buffer SHARED examples/circularBuffer/circularBuffer.cpp)

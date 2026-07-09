@@ -1,7 +1,43 @@
 # Ignore the x64 build directory
 x64/
 build/
+build_debug/
+build_release/
 
-# Optional but highly recommended for Visual Studio files:
+#CMake generated files
+CMakeCache.txt
+MakeFile
+cmake_install.cmake
+CMakeFile/
+
+#Compiled objects
+*.o
+*obj
+*.slo
+
+#Static and shared libraries
+*.a
+*.lib
+*.so.*
+*.dll
+*.dylib
+
+# Visual Studio files:
 *.vcxproj.user
 *.aps
+
+#Executables
+*.exe
+*.out
+
+#Debug Symbols
+*.dSYM/
+*.pdb
+
+#Vim
+*.swp
+*.swo
+
+#Logs
+*.log
+
