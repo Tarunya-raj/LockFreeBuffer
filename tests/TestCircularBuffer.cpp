@@ -1,7 +1,8 @@
 #include "../3rdParty/googletest/googletest/include/gtest/gtest.h"
 #include <stdexcept>
 #include <string>
-#include "../examples/circularBuffer/circularBuffer.cpp"
+#include "../examples/circularBuffer/circularBuffer.h"
+using namespace UD;
 
 TEST(CircularBufferConstructor, ValidCapicity)
 {

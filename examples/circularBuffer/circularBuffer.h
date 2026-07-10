@@ -2,6 +2,7 @@
 #include <iostream>
 #include <stdexcept>
 #include <memory>
+namespace UD{
 
 template <typename T>
 class CircularBuffer {
@@ -124,3 +125,4 @@ public:
 		m_size = 0;
 	}
 };
+}
