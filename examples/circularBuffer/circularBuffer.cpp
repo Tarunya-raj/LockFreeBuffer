@@ -88,6 +88,14 @@ public:
 		m_write_index = (m_write_index + 1) % m_capacity;
 		m_size++;
 	}
+	void push(T&& value)
+	{
+		if(isFull())
+			throw std::overflow_error("Buffer OverFlow\n");
+		m_buffer[m_write_index]=std::move(value);
+		m_write_index=(m_write_index+1)%m_capacity;
+		++m_size;
+	}
 		
 	T pop()
 	{

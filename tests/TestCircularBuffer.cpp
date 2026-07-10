@@ -115,6 +115,18 @@ TEST(CircularBufferWrapAround, WrapAround)
 	EXPECT_EQ(buffer.pop(),50);
 	EXPECT_TRUE(buffer.isEmpty());
 }
+TEST(CircularBufferMultipleWrapAround, MultipleWrap)
+{
+    CircularBuffer<int> buffer(4);
+
+    for (int i = 0; i < 100; ++i)
+    {
+        buffer.push(i);
+        EXPECT_EQ(buffer.pop(), i);
+    }
+
+    EXPECT_TRUE(buffer.isEmpty());
+}
 int main(int argc, char** argv)
 {
 	::testing::InitGoogleTest(&argc, argv);
